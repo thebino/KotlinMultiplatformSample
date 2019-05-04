@@ -1,0 +1,22 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:3.5.0-alpha11'
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
+        classpath "com.github.jengelman.gradle.plugins:shadow:4.0.4"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://kotlin.bintray.com/kotlinx" }
+        maven { url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
+    }
+}

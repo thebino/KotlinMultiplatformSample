@@ -1,0 +1,12 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        classpath 'android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0'
+    }
+}

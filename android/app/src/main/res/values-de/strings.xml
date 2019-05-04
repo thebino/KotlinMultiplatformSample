@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="location_permission_required_icon_description">Location Zugriff gewähren Icon</string>
+    <string name="location_permission_required_description">Bitte gestatten Sie den Zugriff auf die Position Ihres Smartphones.</string>
+    <string name="contacts_permission_required_button">Zugriff gewähren</string>
+
+</resources>

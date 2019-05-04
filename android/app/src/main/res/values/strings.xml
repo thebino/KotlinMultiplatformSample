@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false" override="true">MPPSample</string>
+
+    <string name="location_permission_required_icon_description">Location permission required icon</string>
+    <string name="location_permission_required_description">Please allow access to the position of your phone.</string>
+    <string name="contacts_permission_required_button">Allow access</string>
+
+</resources>

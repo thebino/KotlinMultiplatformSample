@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="visibility"
+            type="int" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view_contacts_permission_required_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#333333"
+            android:visibility="@{visibility, default=visible}" />
+
+        <TextView
+            android:id="@+id/textView_contacts_permission_required_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/location_permission_required_description"
+            android:textColor="@android:color/white"
+            android:visibility="@{visibility, default=visible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_contacts_permission_required_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/location_permission_required_icon_description"
+            android:tint="@android:color/white"
+            android:visibility="@{visibility, default=visible}"
+            app:layout_constraintBottom_toTopOf="@+id/textView_contacts_permission_required_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_location_off_black_24dp" />
+
+        <Button
+            android:id="@+id/button_contacts_permission_required_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="@{onClickListener::onClick}"
+            android:text="@string/contacts_permission_required_button"
+            android:visibility="@{visibility, default=visible}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_contacts_permission_required_description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
